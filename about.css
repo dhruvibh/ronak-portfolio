@@ -1,0 +1,394 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  background:#ffffff;
+}
+
+
+/* ================= TYPOGRAPHY ================= */
+
+h1{
+font-family:"DM Serif Display", serif;
+font-weight:400;
+letter-spacing:.3px;
+line-height:1.15;
+margin-bottom:18px;
+}
+
+h2{
+font-family:"DM Serif Display", serif;
+font-weight:400;
+letter-spacing:.25px;
+line-height:1.2;
+font-size:32px;
+margin-bottom:24px;
+color:#111111;
+}
+
+h3{
+font-family:"DM Serif Display", serif;
+font-weight:400;
+letter-spacing:.2px;
+line-height:1.25;
+font-size:22px;
+margin-bottom:14px;
+color:#111111;
+}
+
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.nav-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 18px 40px;
+  list-style: none;
+}
+
+.brand { margin-right: auto; }
+.brand img { height: 70px; }
+
+.nav-item {
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-item.active {
+  border-bottom: 2px solid #fff;
+}
+
+
+/* DROPDOWN */
+.dropdown { position: relative; }
+
+.arrow {
+  margin-left: 6px;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #000;
+  list-style: none;
+  padding: 8px 0;
+  min-width: 260px;
+  border-radius: 6px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 13px;
+  color: #fff;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+
+/* MAIN */
+.container {
+  flex: 1;
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+
+/* ABOUT */
+
+.about-wrapper{
+max-width:1150px;
+margin:50px auto;
+display:flex;
+gap:60px;
+align-items:flex-start;
+padding:0 20px;
+}
+
+.about-photo{
+flex-shrink:0;
+}
+
+.about-photo img{
+width:250px;
+height:250px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.about-text h2{
+font-size:42px;
+margin-bottom:26px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.about-list {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.about-list li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+
+/* TIMELINE */
+
+.journey-block {
+  max-width: 950px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.timeline-loop {
+  position: relative;
+  min-height: 150px;
+}
+
+.step {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.6s ease;
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.step.active {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+}
+
+.step.left {
+  transform: translateX(-40px);
+}
+
+.step h3 {
+  font-size:20px;
+}
+
+.step span {
+  font-size: 13px;
+  color: #6B7280;
+}
+
+
+/* PROGRESS BARS */
+
+.progress-bars {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.bar {
+  width: 10px;
+  height: 4px;
+  background: #CBD5E1;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bar.active {
+  background: #0B2C4D;
+  width: 25px;
+}
+
+
+/* FOOTER */
+
+.site-footer {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* ================= JOURNEY CARDS ================= */
+
+.journey-block{
+max-width:1100px;
+margin:60px auto;
+padding:0 20px;
+}
+
+.journey-block h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.journey-cards{
+display:flex;
+justify-content:center;
+gap:24px;
+flex-wrap:wrap;
+}
+
+.journey-card{
+
+background:#1f2937;
+
+color:#ffffff;
+
+padding:24px;
+
+border-radius:12px;
+
+width:230px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+transition:transform 0.25s ease, box-shadow 0.25s ease;
+
+}
+
+.journey-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 14px 30px rgba(0,0,0,0.35);
+
+}
+
+.journey-card h3{
+
+font-size:20px;
+margin-bottom:8px;
+color:#ffffff;
+
+}
+
+.journey-card span{
+
+display:block;
+font-size:13px;
+color:#9CA3AF;
+margin-bottom:10px;
+
+}
+
+.journey-card p{
+
+font-size:14px;
+line-height:1.6;
+color:#E5E7EB;
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px){
+
+.about-text h2{
+font-size:34px;
+}
+
+h2{
+font-size:28px;
+}
+
+h3{
+font-size:20px;
+}
+
+}
+
+@media (max-width: 600px){
+
+.about-text h2{
+font-size:28px;
+}
+
+h2{
+font-size:24px;
+}
+
+h3{
+font-size:18px;
+}
+
+}
+
+@media (max-width: 420px){
+
+.about-text h2{
+font-size:24px;
+}
+
+h2{
+font-size:22px;
+}
+
+}

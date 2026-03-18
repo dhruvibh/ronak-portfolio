@@ -1,0 +1,425 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+width:100%;
+height:100%;
+overflow-x:hidden;
+font-family:"Inter",sans-serif;
+background:#ffffff;
+display:flex;
+flex-direction:column;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+background:#000;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.nav-list{
+display:flex;
+align-items:center;
+gap:30px;
+padding:18px 40px;
+list-style:none;
+}
+
+.brand{
+margin-right:auto;
+}
+
+.brand img{
+height:70px;
+}
+
+.nav-item a{
+color:#fff;
+text-decoration:none;
+font-weight:600;
+}
+
+.nav-item a:hover{
+color:#e5e7eb;
+}
+
+
+/* DROPDOWN */
+
+.dropdown{
+position:relative;
+}
+
+.dropdown-menu{
+position:absolute;
+top:100%;
+left:0;
+background:#000;
+list-style:none;
+min-width:240px;
+padding:8px 0;
+border-radius:6px;
+box-shadow:0 15px 40px rgba(0,0,0,0.4);
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
+transition:all .25s ease;
+}
+
+.dropdown:hover .dropdown-menu{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+.dropdown-menu li a{
+display:block;
+padding:12px 20px;
+font-size:13px;
+color:#fff;
+}
+
+.dropdown-menu li a:hover{
+background:rgba(255,255,255,0.1);
+}
+
+
+/* PAGE */
+
+.container{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:60px 20px;
+}
+
+
+/* CONTACT */
+
+.contact-section{
+width:100%;
+display:flex;
+justify-content:center;
+}
+
+.contact-card{
+
+background:#fff;
+width:100%;
+max-width:720px;
+
+padding:45px;
+
+border-radius:12px;
+
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+
+text-align:center;
+}
+
+
+/* TITLE */
+
+.contact-card h1{
+
+font-family:"DM Serif Display",serif;
+font-size:50px;
+
+color:#111111;
+
+margin-bottom:10px;
+}
+
+.contact-sub{
+
+color:#4B5563;
+font-size:15px;
+
+margin-bottom:30px;
+}
+
+
+/* FORM */
+
+.contact-form input,
+.contact-form textarea{
+
+width:100%;
+
+padding:14px;
+
+border:1px solid #D1D5DB;
+
+border-radius:6px;
+
+font-size:14px;
+
+margin-bottom:15px;
+
+font-family:"Inter",sans-serif;
+
+transition:0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+outline:none;
+
+border-color:#0B2C4D;
+
+box-shadow:0 0 0 2px rgba(11,44,77,0.1);
+}
+
+
+/* NAME ROW */
+
+.form-row{
+
+display:flex;
+
+gap:12px;
+}
+
+.form-row input{
+flex:1;
+}
+
+
+/* ACTION BUTTONS */
+
+.contact-actions{
+
+display:flex;
+
+gap:15px;
+
+margin-top:20px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+}
+
+.contact-btn{
+
+border:none;
+
+padding:14px 22px;
+
+border-radius:8px;
+
+font-size:14px;
+
+font-weight:600;
+
+cursor:pointer;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+transition:0.2s;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp{
+
+background:#25D366;
+
+color:#fff;
+}
+
+.whatsapp:hover{
+background:#1ebe5b;
+}
+
+
+/* EMAIL */
+
+.email{
+
+background:#0B2C4D;
+
+color:#fff;
+}
+
+.email:hover{
+background:#08223a;
+}
+
+.contact-btn i{
+font-size:18px;
+}
+
+
+/* FOOTER */
+
+.site-footer{
+
+background:#000;
+
+color:#fff;
+
+text-align:center;
+
+padding:20px;
+}
+
+
+/* =========================
+RESPONSIVE DESIGN
+========================= */
+
+/* Large laptops */
+@media (max-width: 1200px){
+
+.container,
+.service-content,
+.service-hero,
+.about-wrapper{
+max-width: 95%;
+}
+
+}
+
+
+/* Tablets */
+@media (max-width: 900px){
+
+.nav-list{
+gap:20px;
+padding:16px 20px;
+}
+
+.brand img{
+height:55px;
+}
+
+.service-hero h1{
+font-size:45px;
+}
+
+.service-hero h2{
+font-size:18px;
+}
+
+.fm-grid{
+grid-template-columns:1fr;
+}
+
+.expertise-block{
+grid-template-columns:1fr;
+}
+
+.about-wrapper{
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+.about-photo{
+margin-top:20px;
+}
+
+}
+
+
+/* Mobile phones */
+@media (max-width: 600px){
+
+.nav-list{
+flex-wrap:wrap;
+gap:12px;
+padding:14px 16px;
+}
+
+.brand img{
+height:50px;
+}
+
+.service-hero{
+margin:35px auto 20px;
+}
+
+.h1{
+font-size:45px;
+}
+
+.service-hero h2{
+font-size:16px;
+}
+
+.service-content p{
+font-size:15px;
+}
+
+.container{
+padding:0 15px;
+}
+
+.fm-card{
+padding:20px;
+}
+
+.goal-list{
+flex-direction:column;
+}
+
+.goal-item{
+width:100%;
+text-align:center;
+}
+
+.kpi-grid{
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.expertise-block{
+gap:25px;
+}
+
+.exp-text p{
+font-size:15px;
+}
+
+}
+
+
+/* Small phones */
+@media (max-width: 420px){
+
+.service-hero h1{
+font-size:24px;
+}
+
+.service-hero h2{
+font-size:15px;
+}
+
+.brand img{
+height:45px;
+}
+
+.nav-list{
+padding:12px;
+}
+
+}
