@@ -507,3 +507,13 @@ padding-right:20px !important;
 }
 
 }
+
+@media (max-width: 480px) {
+
+.service-hero h1,
+.service-hero h2,
+.service-content {
+  text-align: left;
+}
+
+}
