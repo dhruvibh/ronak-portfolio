@@ -477,3 +477,33 @@ padding-right:20px !important;
 }
 
 }
+/* =========================
+MOBILE HEADING ALIGN FIX (FINAL)
+========================= */
+
+@media (max-width:768px){
+
+/* FORCE LEFT ALIGN FOR HERO */
+.service-hero{
+text-align:left !important;
+}
+
+/* Heading */
+.service-hero h1{
+text-align:left !important;
+margin-left:0 !important;
+}
+
+/* Tagline */
+.service-hero h2{
+text-align:left !important;
+margin-left:0 !important;
+}
+
+/* Ensure content lines up perfectly */
+.service-content{
+padding-left:20px !important;
+padding-right:20px !important;
+}
+
+}
