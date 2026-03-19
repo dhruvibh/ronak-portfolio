@@ -411,3 +411,74 @@ font-size:22px;
   }
 
 }
+
+/* =========================
+MOBILE HAMBURGER MENU (SAFE)
+========================= */
+
+@media (max-width:768px){
+
+/* navbar stays same height */
+.navbar{
+position:relative;
+}
+
+/* show hamburger */
+.menu-toggle{
+display:block;
+position:absolute;
+right:20px;
+top:50%;
+transform:translateY(-50%);
+font-size:26px;
+color:#fff;
+cursor:pointer;
+}
+
+/* hide menu initially */
+.nav-list{
+display:none;
+flex-direction:column;
+background:#000;
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+padding:20px 0;
+text-align:center;
+}
+
+/* show on click */
+.nav-list.active{
+display:flex;
+}
+
+/* keep spacing clean */
+.nav-item{
+width:100%;
+padding:10px 0;
+}
+
+/* disable hover dropdown on mobile */
+.dropdown:hover .dropdown-menu{
+display:none;
+}
+
+/* hide submenu (we’ll fix later if needed) */
+.dropdown-menu{
+display:none;
+}
+
+}
+
+.menu-toggle{
+display:none;
+}
+
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+}
