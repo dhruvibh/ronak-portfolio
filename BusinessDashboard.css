@@ -436,3 +436,44 @@ padding:12px;
 }
 
 }
+
+/* =========================
+MOBILE TEXT ALIGNMENT FIX
+(only for service pages)
+========================= */
+
+@media (max-width:768px){
+
+/* Fix container alignment */
+.container{
+padding-left:20px !important;
+padding-right:20px !important;
+}
+
+/* Fix hero section alignment */
+.service-hero{
+padding-left:20px !important;
+padding-right:20px !important;
+}
+
+/* Ensure heading aligns properly */
+.service-hero h1{
+margin-left:0 !important;
+padding-left:0 !important;
+text-align:left !important;
+}
+
+/* Fix tagline alignment */
+.service-hero h2{
+margin-left:0 !important;
+padding-left:0 !important;
+text-align:left !important;
+}
+
+/* Fix paragraph alignment */
+.service-content{
+padding-left:20px !important;
+padding-right:20px !important;
+}
+
+}
