@@ -392,3 +392,22 @@ font-size:22px;
 }
 
 }
+
+@media (max-width: 768px) {
+
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-photo img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+}
