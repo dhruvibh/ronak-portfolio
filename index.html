@@ -159,9 +159,12 @@
 <script src="slider.js"></script>
 
 <script>
-function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("mobile-open");
-}
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-list");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("mobile-open");
+});
 </script>
 </body>
 </html>
