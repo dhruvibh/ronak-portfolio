@@ -167,7 +167,6 @@
 <script src="slider.js"></script>
 
 <script>
-// menu toggle (keep this)
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav-list");
 
@@ -175,11 +174,10 @@ toggle.addEventListener("click", () => {
     nav.classList.toggle("mobile-open");
 });
 
-// FIXED DROPDOWN LOGIC
 document.querySelectorAll(".expertise-toggle").forEach(arrow => {
     arrow.addEventListener("click", (e) => {
         if(window.innerWidth <= 768){
-            e.stopPropagation(); // prevent link click
+            e.stopPropagation();
             arrow.closest(".dropdown").classList.toggle("open");
         }
     });

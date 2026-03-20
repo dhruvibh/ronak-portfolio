@@ -357,11 +357,36 @@ width:100%;
 text-align:center;
 }
 
+/* DEFAULT LINKS */
 .nav-item a{
 display:block;
 width:100%;
 padding:14px 0;
 color:#fff;
+}
+
+/* 🔥 FIX: dropdown alignment */
+.dropdown{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+}
+
+/* 🔥 FIX: override full width ONLY for expertise */
+.expertise-link{
+display:inline-block;
+width:auto;
+padding:14px 5px;
+}
+
+/* 🔥 FIX: arrow beside text */
+.arrow{
+display:inline-block;
+color:#fff;
+font-size:16px;
+padding:6px;
+cursor:pointer;
 }
 
 /* DROPDOWN */
@@ -371,36 +396,14 @@ position:static;
 background:#000;
 }
 
+/* SHOW WHEN CLICKED */
 .dropdown.open .dropdown-menu{
 display:block;
 }
 
-/* DISABLE HOVER ON MOBILE */
+/* DISABLE HOVER */
 .dropdown:hover .dropdown-menu{
 display:none;
-}
-
-.dropdown{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:6px;
-}
-
-/* fix text link (don’t take full width) */
-.expertise-link{
-display:inline-block;   /* IMPORTANT */
-width:auto;             /* remove full width */
-padding:14px 5px;
-}
-
-/* fix arrow visibility */
-.arrow{
-display:inline-block;
-color:#fff;
-font-size:16px;
-padding:8px;
-cursor:pointer;
 }
 
 }
