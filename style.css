@@ -50,6 +50,7 @@ background:#000;
 position:sticky;
 top:0;
 z-index:9999;
+position:relative;
 }
 
 .nav-list{
@@ -515,18 +516,21 @@ transform:translateY(-2px);
 }
 
 /* =========================
-SAFE MOBILE HAMBURGER
-(NO DESKTOP IMPACT)
+FINAL WORKING MOBILE NAV
 ========================= */
 
 .menu-toggle{
 display:none;
 }
 
-/* MOBILE ONLY */
 @media (max-width:768px){
 
-/* show hamburger */
+/* make navbar reference for absolute items */
+.navbar{
+position:relative;
+}
+
+/* hamburger */
 .menu-toggle{
 display:block;
 position:absolute;
@@ -536,141 +540,20 @@ transform:translateY(-50%);
 font-size:26px;
 color:#fff;
 cursor:pointer;
-z-index:10000;
+z-index:1000;
 }
 
 /* hide menu initially */
 .nav-list{
-display:none !important;
-}
-
-/* show when active */
-.nav-list.mobile-open{
-display:flex !important;
-flex-direction:column;
-position:absolute;
-top:100%;
-left:0;
-width:100%;
-background:#000;
-padding:20px 0;
-text-align:center;
-z-index:9999;
-}
-
-/* spacing */
-.nav-item{
-padding:10px 0;
-width:100%;
-}
-
-}
-
-/* =========================
-SAFE MOBILE NAV (FIXED)
-========================= */
-
-.menu-toggle{
 display:none;
-}
-
-/* MOBILE ONLY */
-@media (max-width:768px){
-
-/* show hamburger */
-.menu-toggle{
-display:block;
-position:absolute;
-right:20px;
-top:50%;
-transform:translateY(-50%);
-font-size:26px;
-color:#fff;
-cursor:pointer;
-z-index:1000;
-}
-
-/* KEEP nav-list flex (important fix) */
-.nav-list{
 flex-direction:column;
 align-items:center;
-width:100%;
-position:absolute;
-top:100%;
-left:0;
-background:#000;
-
-max-height:0;
-overflow:hidden;
-transition:max-height 0.3s ease;
-}
-
-/* expand */
-.nav-list.mobile-open{
-max-height:500px; /* enough height */
-}
-
-/* spacing */
-.nav-item{
-width:100%;
-text-align:center;
-padding:12px 0;
-}
-
-/* FIX dropdown */
-.dropdown-menu{
-position:static;
-opacity:1;
-visibility:visible;
-transform:none;
-display:none;
-}
-
-.dropdown:hover .dropdown-menu{
-display:none;
-}
-
-.dropdown-menu.open{
-display:block;
-}
-
-}
-
-
-/* =========================
-SAFE MOBILE NAV (FINAL FIX)
-========================= */
-
-.menu-toggle{
-display:none;
-}
-
-/* MOBILE ONLY */
-@media (max-width:768px){
-
-/* show hamburger */
-.menu-toggle{
-display:block;
-position:absolute;
-right:20px;
-top:50%;
-transform:translateY(-50%);
-font-size:26px;
-color:#fff;
-cursor:pointer;
-z-index:1000;
-}
-
-/* IMPORTANT: DO NOT HIDE nav-list */
-.nav-list{
-flex-direction:column;
 position:absolute;
 top:100%;
 left:0;
 width:100%;
 background:#000;
 padding:20px 0;
-display:none;   /* only hidden here */
 }
 
 /* show when clicked */
@@ -681,8 +564,26 @@ display:flex;
 /* spacing */
 .nav-item{
 width:100%;
-text-align:center;
 padding:12px 0;
+text-align:center;
+}
+
+/* dropdown fix for mobile */
+.dropdown-menu{
+position:static;
+opacity:1;
+visibility:visible;
+transform:none;
+display:none;
+}
+
+.dropdown-menu.open{
+display:block;
+}
+
+/* disable hover on mobile */
+.dropdown:hover .dropdown-menu{
+display:none;
 }
 
 }
