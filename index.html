@@ -51,7 +51,8 @@
     <li class="nav-item"><a href="about.html">About</a></li>
 
     <li class="nav-item dropdown">
-      <a href="expertise.html">
+      
+      <a href="expertise.html" class="expertise-toggle">
         Expertise <span class="arrow">▾</span>
       </a>
       <ul class="dropdown-menu">
@@ -165,6 +166,17 @@ const nav = document.querySelector(".nav-list");
 toggle.addEventListener("click", () => {
     nav.classList.toggle("mobile-open");
 });
+
+const expToggle = document.querySelector(".expertise-toggle");
+const dropdown = document.querySelector(".dropdown");
+
+expToggle.addEventListener("click", (e) => {
+    if(window.innerWidth <= 768){
+        e.preventDefault();
+        dropdown.classList.toggle("open");
+    }
+});
 </script>
+
 </body>
 </html>

@@ -341,3 +341,43 @@ display:none;
 }
 
 }
+
+@media (max-width:768px){
+
+/* ✅ Keep navbar layout SAME */
+.navbar{
+display:flex;
+align-items:center;
+position:relative;
+}
+
+/* ✅ Move logo OUTSIDE dropdown visually */
+.brand{
+position:absolute;
+left:20px;
+top:50%;
+transform:translateY(-50%);
+z-index:10000;
+}
+
+/* ✅ Push menu below navbar */
+.nav-list{
+top:110px;
+}
+
+/* ✅ Hide dropdown by default */
+.dropdown-menu{
+display:none;
+}
+
+/* ✅ Show when clicked */
+.dropdown.open .dropdown-menu{
+display:block;
+}
+
+/* ❌ Disable hover on mobile */
+.dropdown:hover .dropdown-menu{
+display:none;
+}
+
+}
