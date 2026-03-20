@@ -52,18 +52,24 @@
     <li class="nav-item"><a href="about.html">About</a></li>
 
     <li class="nav-item dropdown">
-      
-      <a href="expertise.html" class="expertise-toggle">
-        Expertise <span class="arrow">▾</span>
-      </a>
-      <ul class="dropdown-menu">
-        <li><a href="BusinessDashboard.html">Business Dashboards</a></li>
-        <li><a href="FinancialModelling.html">Financial Modelling</a></li>
-        <li><a href="BusinessParterning.html">Business Partnering</a></li>
-        <li><a href="BPO.html">Business Process Outsourcing</a></li>
-        <li><a href="Project.html">Project Management</a></li>
-      </ul>
-    </li>
+
+  <!-- TEXT → normal navigation -->
+  <a href="expertise.html" class="expertise-link">
+    Expertise
+  </a>
+
+  <!-- ARROW → dropdown trigger -->
+  <span class="arrow expertise-toggle">▾</span>
+
+  <ul class="dropdown-menu">
+    <li><a href="BusinessDashboard.html">Business Dashboards</a></li>
+    <li><a href="FinancialModelling.html">Financial Modelling</a></li>
+    <li><a href="BusinessParterning.html">Business Partnering</a></li>
+    <li><a href="BPO.html">Business Process Outsourcing</a></li>
+    <li><a href="Project.html">Project Management</a></li>
+  </ul>
+
+</li>
 
     <li class="nav-item"><a href="contact.html">Contact</a></li>
   </ul>
@@ -168,14 +174,14 @@ toggle.addEventListener("click", () => {
     nav.classList.toggle("mobile-open");
 });
 
-const expToggle = document.querySelector(".expertise-toggle");
-const dropdown = document.querySelector(".dropdown");
-
-expToggle.addEventListener("click", (e) => {
-    if(window.innerWidth <= 768){
-        e.preventDefault();
-        dropdown.classList.toggle("open");
-    }
+// ONLY arrow triggers dropdown
+document.querySelectorAll(".expertise-toggle").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        if(window.innerWidth <= 768){
+            e.stopPropagation(); // prevent link click
+            btn.parentElement.classList.toggle("open");
+        }
+    });
 });
 </script>
 
