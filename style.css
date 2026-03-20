@@ -50,14 +50,20 @@ background:#000;
 position:sticky;
 top:0;
 z-index:9999;
+
+/* FIX */
+height:110px;
+display:flex;
+align-items:center;
 }
 
 .nav-list{
 display:flex;
 align-items:center;
 gap:30px;
-padding:18px 40px;
+padding:0 40px;
 list-style:none;
+width:100%;
 z-index:9998;
 }
 
@@ -252,18 +258,13 @@ padding:20px;
 }
 
 
-/* ================= RESPONSIVE ================= */
+/* ================= TABLET ================= */
 
-/* tablets */
 @media(max-width:900px){
 
 .nav-list{
 gap:20px;
-padding:16px 20px;
-}
-
-.brand img{
-height:55px;
+padding:0 20px;
 }
 
 .hero-text h1{
@@ -281,8 +282,9 @@ display:none;
 
 @media (max-width:768px){
 
+/* hamburger */
 .menu-toggle{
-display:block;
+display:flex;
 position:absolute;
 right:20px;
 top:50%;
@@ -291,21 +293,26 @@ font-size:26px;
 color:#fff;
 cursor:pointer;
 z-index:9999;
+
+/* FIX CLICK AREA */
+width:40px;
+height:40px;
+align-items:center;
+justify-content:center;
 }
 
-/* hide nav initially */
+/* mobile menu */
 .nav-list{
 display:none;
 flex-direction:column;
 position:absolute;
-top:100%;
+top:70px; /* FIXED alignment */
 left:0;
 width:100%;
 background:#000;
 padding:20px 0;
 }
 
-/* show when toggled */
 .nav-list.mobile-open{
 display:flex;
 }
@@ -316,7 +323,7 @@ text-align:center;
 padding:12px 0;
 }
 
-/* dropdown mobile fix */
+/* dropdown mobile */
 .dropdown-menu{
 position:static;
 opacity:1;
