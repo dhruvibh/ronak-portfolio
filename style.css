@@ -276,13 +276,37 @@ font-size:40px;
 
 /* ================= MOBILE ================= */
 
+/* ================= MOBILE ================= */
+
 .menu-toggle{
 display:none;
 }
 
 @media (max-width:768px){
 
-/* hamburger */
+/* NAVBAR */
+.navbar{
+display:flex;
+align-items:center;
+position:relative;
+height:70px;
+padding:0 20px;
+}
+
+/* LOGO */
+.brand{
+position:absolute;
+left:15px;
+top:50%;
+transform:translateY(-50%);
+z-index:10001;
+}
+
+.brand img{
+height:50px;
+}
+
+/* HAMBURGER */
 .menu-toggle{
 display:flex;
 position:absolute;
@@ -292,109 +316,58 @@ transform:translateY(-50%);
 font-size:26px;
 color:#fff;
 cursor:pointer;
-z-index:9999;
+z-index:10002;
 
-/* FIX CLICK AREA */
 width:40px;
 height:40px;
 align-items:center;
 justify-content:center;
 }
 
-/* mobile menu */
+/* MENU */
 .nav-list{
 display:none;
 flex-direction:column;
 position:absolute;
-top:70px; /* FIXED alignment */
+top:70px;
 left:0;
 width:100%;
 background:#000;
 padding:20px 0;
+z-index:10000;
 }
 
 .nav-list.mobile-open{
 display:flex;
 }
 
+/* MENU ITEMS */
 .nav-item{
 width:100%;
 text-align:center;
-padding:12px 0;
 }
 
-/* dropdown mobile */
-.dropdown-menu{
-position:static;
-opacity:1;
-visibility:visible;
-transform:none;
-display:none;
-}
-
-.dropdown-menu.open{
+.nav-item a{
 display:block;
+width:100%;
+padding:14px 0;
+color:#fff;
 }
 
-.dropdown:hover .dropdown-menu{
-display:none;
-}
-
-}
-
-@media (max-width:768px){
-
-/* ✅ Keep navbar layout SAME */
-.navbar{
-display:flex;
-align-items:center;
-position:relative;
-height: 70px;
-padding: 0 20px;
-}
-
-/* ✅ Move logo OUTSIDE dropdown visually */
-.brand{
-position:absolute;
-left:15px;
-top:50%;
-transform:translateY(-50%);
-z-index:10001; /* higher than menu */
-}
-/* ✅ Push menu below navbar */
-.nav-list{
-top:70px;
-}
-
-.brand img{
-height:50px;
-}
-
-
-/* ✅ Hide dropdown by default */
+/* DROPDOWN */
 .dropdown-menu{
 display:none;
 position:static;
-opacity:1;
-visibility:visible;
-transform:none;
+background:#000;
 }
 
-/* ✅ Show when clicked */
 .dropdown.open .dropdown-menu{
 display:block;
 }
 
-/* ❌ Disable hover on mobile */
+/* DISABLE HOVER ON MOBILE */
 .dropdown:hover .dropdown-menu{
 display:none;
-}
-
-.nav-list{
-position:absolute;
-width:100%;
-background:#000;
-z-index:9999;
 }
 
 }
