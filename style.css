@@ -365,28 +365,31 @@ padding:14px 0;
 color:#fff;
 }
 
-/* 🔥 FIX: dropdown alignment */
+/* 🔥 FIX: dropdown row */
 .dropdown{
 display:flex;
 align-items:center;
 justify-content:center;
-gap:6px;
+gap:4px;
+position:relative;
 }
 
-/* 🔥 FIX: override full width ONLY for expertise */
-.expertise-link{
-display:inline-block;
-width:auto;
-padding:14px 5px;
+/* 🔥 CRITICAL FIX (removes overlay issue) */
+.dropdown .expertise-link{
+display:inline-block !important;
+width:auto !important;
+padding:14px 4px;
 }
 
-/* 🔥 FIX: arrow beside text */
+/* 🔥 ARROW FIX */
 .arrow{
 display:inline-block;
 color:#fff;
 font-size:16px;
 padding:6px;
 cursor:pointer;
+position:relative;
+z-index:2; /* ensures clickable */
 }
 
 /* DROPDOWN */

@@ -60,6 +60,7 @@
 
   <!-- ARROW → dropdown trigger -->
   <span class="arrow expertise-toggle">▾</span>
+  
 
   <ul class="dropdown-menu">
     <li><a href="BusinessDashboard.html">Business Dashboards</a></li>
@@ -177,6 +178,7 @@ toggle.addEventListener("click", () => {
 document.querySelectorAll(".expertise-toggle").forEach(arrow => {
     arrow.addEventListener("click", (e) => {
         if(window.innerWidth <= 768){
+            e.preventDefault();
             e.stopPropagation();
             arrow.closest(".dropdown").classList.toggle("open");
         }
