@@ -42,9 +42,10 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-  <ul class="nav-list">
+   <ul class="nav-list" id="navMenu">
     <li class="brand">
       <img src="logo.png" alt="Logo">
+      
     </li>
 
     <li class="nav-item"><a href="about.html">About</a></li>
@@ -64,6 +65,7 @@
 
     <li class="nav-item"><a href="contact.html">Contact</a></li>
   </ul>
+   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </nav>
 
 <!-- MAIN -->
@@ -155,5 +157,11 @@
 </footer>
 
 <script src="slider.js"></script>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("mobile-open");
+}
+</script>
 </body>
 </html>

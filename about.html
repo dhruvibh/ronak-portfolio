@@ -3,24 +3,34 @@
 <head>
   <meta charset="UTF-8">
 
+  <!-- Mobile responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Page Title -->
   <title>About Ronak Dagliya | Chartered Accountant</title>
 
+  <!-- Meta Description -->
   <meta name="description" content="Learn more about Ronak Dagliya, a Chartered Accountant providing taxation, audit, compliance and financial advisory services for businesses and individuals.">
 
+  <!-- Author -->
   <meta name="author" content="Ronak Dagliya">
 
+  <!-- Search Engine Indexing -->
   <meta name="robots" content="index, follow">
 
+  <!-- Open Graph (social media preview) -->
   <meta property="og:title" content="About Ronak Dagliya | Chartered Accountant">
   <meta property="og:description" content="Know more about Chartered Accountant Ronak Dagliya, his expertise, experience and professional financial advisory services.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://caronakdagliya.com">
   <meta property="og:image" content="https://ronak-dagliya.netlify.app/logo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Page Styles -->
   <link rel="stylesheet" href="about.css">
 </head>
 
@@ -28,26 +38,17 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-
-  <!-- LOGO -->
-  <div class="brand">
-    <a href="index.html"><img src="logo.png" alt="Logo"></a>
-  </div>
-
-  <!-- HAMBURGER -->
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-  <!-- NAV ITEMS -->
   <ul class="nav-list" id="navMenu">
-
+    <li class="brand">
+      <a href="index.html"><img src="logo.png" alt="Logo"></a>
+    </li>
     <li class="nav-item"><a href="index.html">Home</a></li>
     <li class="nav-item active">About</li>
 
     <li class="nav-item dropdown">
-      <a href="expertise.html">
+      <a href="expertise.html" class="dropdown-toggle">
         Expertise <span class="arrow">▾</span>
       </a>
-
       <ul class="dropdown-menu">
         <li><a href="BusinessDashboard.html">Business Dashboards</a></li>
         <li><a href="FinancialModelling.html">Financial Modelling</a></li>
@@ -58,8 +59,8 @@
     </li>
 
     <li class="nav-item"><a href="contact.html">Contact</a></li>
-
   </ul>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </nav>
 
 
@@ -73,110 +74,103 @@
 
     <div class="about-text">
       <h2>Your Trusted Financial Partner</h2>
-
       <p>I’m <b>Ronak Dagliya</b>, a Chartered Accountant with a Master’s degree in Business Management from <b>IIM Udaipur</b> and <b>14+ years of experience</b> in finance, strategy, and business transformation.</p>
-
       <p>Having worked with leading multinational organizations, I help businesses gain <b>financial clarity, reduce revenue leakage, and optimize costs.</b> My focus is on turning financial data into <b>actionable insights that drive better decisions and long-term growth</b>.</p>
-
       <p>With experience across industries including <b>Power, FMCG, Telecommunications, Refineries, and Warehousing</b>, I bring a practical and holistic perspective to financial management.</p>
-
+      <p></p>
       <h3>What I help businesses with:</h3>
-
       <ul class="about-list">
         <li><b>Digital Transformation</b> – Implementing tools like Power BI and integrating ERP systems for real-time insights.</li>
         <li><b>Financial Planning & Analysis (FP&A)</b> – Budgeting, forecasting, and performance analysis for informed decision-making.</li>
         <li><b>Business & Project Financial Modelling</b> – Creating robust models for tenders, new setups, and strategic initiatives.</li>
         <li><b>ESG Reporting</b> – Supporting businesses in aligning with sustainability and compliance goals.</li>
       </ul>
-
-      <p>Today, as a trusted finance practitioner, I focus on <b>building strong relationships with businesses</b> and acting as a <b>dependable partner in their growth journey</b>.</p>
+      <p>Today, as a trusted finance practitioner, I focus on <b>building strong relationships with businesses</b> and acting as a <b>dependable partner in their growth journey</b>. My goal is to empower organizations with actionable insights and innovative solutions that drive efficiency and profitability.</p>
 
     </div>
   </section>
-
 
   <!-- EDUCATION -->
-  <section class="journey-block">
-    <h2>Education</h2>
+<section class="journey-block">
 
-    <div class="journey-cards">
+<h2>Education</h2>
 
-      <div class="journey-card">
-        <h3>Chartered Accountant</h3>
-        <span>2008 – 2011</span>
-        <p>Taxation, audit and accounting.</p>
-      </div>
+<div class="journey-cards">
 
-      <div class="journey-card">
-        <h3>MBA — IIM Udaipur</h3>
-        <span>2022-2024</span>
-        <p>Strategy, leadership and decision-making.</p>
-      </div>
+<div class="journey-card">
+<h3>Chartered Accountant</h3>
+<span>2008 – 2011</span>
+<p>Taxation, audit and accounting.</p>
+</div>
 
-      <div class="journey-card">
-        <h3>CPA</h3>
-        <span>Ongoing</span>
-        <p>US taxation, auditing and accounting.</p>
-      </div>
+<div class="journey-card">
+<h3>MBA — IIM Udaipur</h3>
+<span>2022-2024</span>
+<p>Strategy, leadership and decision-making.</p>
+</div>
 
-      <div class="journey-card">
-        <h3>Continuous Learning</h3>
-        <span>Ongoing</span>
-        <p>Upskilling in advisory, finance and digital tools.</p>
-      </div>
+<div class="journey-card">
+<h3>CPA</h3>
+<span>Ongoing</span>
+<p>US taxation, auditing and accounting.</p>
+</div>
 
-    </div>
-  </section>
+<div class="journey-card">
+<h3>Continuous Learning</h3>
+<span>Ongoing</span>
+<p>Upskilling in advisory, finance and digital tools.</p>
+</div>
+
+</div>
+
+</section>
 
 
-  <!-- PROFESSIONAL JOURNEY -->
-  <section class="journey-block">
+<!-- PROFESSIONAL JOURNEY -->
+<section class="journey-block">
 
-    <h2>Professional Journey</h2>
+<h2>Professional Journey</h2>
 
-    <div class="journey-cards">
+<div class="journey-cards">
 
-      <div class="journey-card">
-        <h3>PwC</h3>
-        <span>Early Career: 2008 - 2012</span>
-        <p>Audits - Statutory, SOX, Foreign reportings</p>
-      </div>
+<div class="journey-card">
+<h3>PwC</h3>
+<span>Early Career: 2008 - 2012</span>
+<p>Audits - Statutory, SOX, Foreign reportings</p>
+</div>
 
-      <div class="journey-card">
-        <h3>L&T</h3>
-        <span>2012 - 2016</span>
-        <p>MIS, project management, AR, Treasury</p>
-      </div>
+<div class="journey-card">
+<h3>L&T</h3>
+<span>2012 - 2016</span>
+<p>MIS, project management, AR, Treasury</p>
+</div>
 
-      <div class="journey-card">
-        <h3>Secure Meters</h3>
-        <span>2016 - 2025</span>
-        <p>Business Partnering, MIS and Treasury</p>
-      </div>
+<div class="journey-card">
+<h3>Secure Meters</h3>
+<span>2016 - 2025</span>
+<p>Business Partnering, MIS and Treasury</p>
+</div>
 
-      <div class="journey-card">
-        <h3>BG Advisors</h3>
-        <span>Nov 2025 – Present</span>
-        <p>Partnered advisory practice supporting businesses</p>
-      </div>
+<div class="journey-card">
+<h3>BG Advisors</h3>
+<span>Nov 2025 – Present</span>
+<p>Partnered advisory practice supporting businesses</p>
+</div>
 
-    </div>
+</div>
 
-  </section>
+</section>
 
 </main>
-
 
 <footer class="site-footer">
   <p>© 2026 Ronak Dagliya | Chartered Accountants</p>
   <p>Udaipur, Rajasthan</p>
 </footer>
 
-
-<!-- JS -->
 <script>
 function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("active");
+  document.getElementById("navMenu").classList.toggle("mobile-open");
 }
 </script>
 

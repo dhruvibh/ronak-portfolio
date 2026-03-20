@@ -36,7 +36,7 @@
 
 <body>
     <nav>
-  <ul>
+  <ul class="nav-list" id="navMenu">
     <li class="brand">
       <a href="index.html"><img src="logo.png" alt="Logo"></a>
     </li>
@@ -63,6 +63,7 @@
       <a href="contact.html">Contact</a>
     </li>
   </ul>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </nav>
 
 
@@ -155,5 +156,11 @@ Our project and contract management services cover financial planning, cash flow
   <p>Udaipur, Rajasthan</p>
 </footer>
 
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("mobile-open");
+}
+</script>
 </body>
 </html>

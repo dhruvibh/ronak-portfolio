@@ -41,7 +41,7 @@
 <!-- NAVBAR -->
 
 <nav class="navbar">
-<ul class="nav-list">
+<ul class="nav-list" id="navMenu">
 
 <li class="brand">
 <a href="index.html"><img src="logo.png"></a>
@@ -66,6 +66,7 @@
 <li class="nav-item active"><a href="contact.html">Contact</a></li>
 
 </ul>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </nav>
 
 
@@ -130,6 +131,10 @@ Contact via Email
 </footer>
 
 <script src="contact.js"></script>
-
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("mobile-open");
+}
+</script>
 </body>
 </html>

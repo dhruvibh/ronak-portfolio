@@ -37,7 +37,7 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-<ul class="nav-list">
+<ul class="nav-list" id="navMenu">
 
 <li class="brand">
 <a href="index.html"><img src="logo.png" alt="Logo"></a>
@@ -64,6 +64,7 @@ Expertise <span class="arrow">▾</span>
 <li class="nav-item"><a href="contact.html">Contact</a></li>
 
 </ul>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </nav>
 
 <!-- MAIN -->
@@ -145,6 +146,12 @@ If you’re looking for a partner who cares about your business as much as you d
 <p>© 2026 Ronak Dagliya | Chartered Accountants</p>
 <p>Udaipur, Rajasthan</p>
 </footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("mobile-open");
+}
+</script>
 
 </body>
 </html>
