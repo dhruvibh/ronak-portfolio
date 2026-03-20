@@ -51,22 +51,13 @@ position:sticky;
 top:0;
 z-index:9999;
 
-/* FIX */
 height:110px;
 display:flex;
 align-items:center;
-}
-
-.nav-list{
-display:flex;
-align-items:center;
-gap:30px;
 padding:0 40px;
-list-style:none;
-width:100%;
-z-index:9998;
 }
 
+/* LOGO */
 .brand{
 margin-right:auto;
 }
@@ -74,6 +65,17 @@ margin-right:auto;
 .brand img{
 height:70px;
 width:auto;
+}
+
+/* MENU */
+.nav-list{
+display:flex;
+align-items:center; /* FIX: not right */
+gap:30px;
+list-style:none;
+
+/* ❌ REMOVE THIS */
+ /* width:100%; */
 }
 
 .nav-item a{
@@ -85,8 +87,6 @@ font-weight:600;
 .nav-item a:hover{
 color:#e5e7eb;
 }
-
-
 /* ================= DROPDOWN ================= */
 
 .dropdown{
@@ -350,6 +350,7 @@ display:flex;
 align-items:center;
 position:relative;
 height: 70px;
+padding: 0 20px;
 }
 
 /* ✅ Move logo OUTSIDE dropdown visually */
@@ -373,6 +374,10 @@ height:50px;
 /* ✅ Hide dropdown by default */
 .dropdown-menu{
 display:none;
+position:static;
+opacity:1;
+visibility:visible;
+transform:none;
 }
 
 /* ✅ Show when clicked */
