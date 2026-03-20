@@ -349,21 +349,26 @@ display:none;
 display:flex;
 align-items:center;
 position:relative;
+height: 70px;
 }
 
 /* ✅ Move logo OUTSIDE dropdown visually */
 .brand{
 position:absolute;
-left:20px;
+left:15px;
 top:50%;
 transform:translateY(-50%);
-z-index:10000;
+z-index:10001; /* higher than menu */
 }
-
 /* ✅ Push menu below navbar */
 .nav-list{
-top:110px;
+top:70px;
 }
+
+.brand img{
+height:50px;
+}
+
 
 /* ✅ Hide dropdown by default */
 .dropdown-menu{
@@ -378,6 +383,13 @@ display:block;
 /* ❌ Disable hover on mobile */
 .dropdown:hover .dropdown-menu{
 display:none;
+}
+
+.nav-list{
+position:absolute;
+width:100%;
+background:#000;
+z-index:9999;
 }
 
 }
