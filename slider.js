@@ -10,8 +10,15 @@ let startX = 0;
 let currentX = 0;
 let isDragging = false;
 
+/* EXIT if elements not present (VERY IMPORTANT) */
+if (slides.length === 0 || !sliderBox) {
+  console.warn("Slider not initialized - elements missing");
+} else {
+
 /* Show slide */
 function showSlide(i) {
+  if (!slides[i] || !bars[i]) return;
+
   slides.forEach(s => s.classList.remove("active"));
   bars.forEach(b => b.classList.remove("active"));
 
@@ -96,3 +103,5 @@ sliderBox.addEventListener("touchend", (e) => {
 
   setTimeout(() => paused = false, 3000);
 });
+
+}

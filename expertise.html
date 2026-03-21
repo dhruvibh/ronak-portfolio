@@ -35,20 +35,23 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="navbar">
+      <div class="brand">
+    <a href="index.html"><img src="logo.png" alt="Logo"></a>
+  </div>
   <ul class="nav-list" id="navMenu">
-    <li class="brand">
-      <a href="index.html"><img src="logo.png" alt="Logo"></a>
-    </li>
     <li class="nav-item"><a href="index.html">Home</a></li>
     <li class="nav-item">
       <a href="about.html">About</a>
     </li>
 
     <li class="nav-item dropdown">
-      <a href="expertise.html">
-        <span class="active">Expertise</span> <span class="arrow">▾</span>
+      <a href="expertise.html" class="expertise-link">
+        Expertise
       </a>
+
+      <span class="arrow expertise-toggle">▾</span>
+
       
       <ul class="dropdown-menu">
         <li><a href="BusinessDashboard.html">Business Dashboards</a></li>
@@ -158,9 +161,27 @@ Our project and contract management services cover financial planning, cash flow
 
 
 <script>
-function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("mobile-open");
-}
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-list");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("mobile-open");
+});
+
+// dropdown arrow click
+document.querySelectorAll(".expertise-toggle").forEach(arrow => {
+    arrow.addEventListener("click", function(e) {
+
+        if(window.innerWidth <= 768){
+            e.preventDefault();
+            e.stopPropagation();
+
+            const dropdown = this.closest(".dropdown");
+            dropdown.classList.toggle("open");
+        }
+
+    });
+});
 </script>
 </body>
 </html>

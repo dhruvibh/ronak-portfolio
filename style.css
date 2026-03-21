@@ -284,13 +284,11 @@ font-size:40px;
 }
 
 
-/* ================= MOBILE ================= */
-
-/* ================= MOBILE ================= */
 
 .menu-toggle{
 display:none;
 }
+
 
 @media (max-width:768px){
 
@@ -338,12 +336,15 @@ justify-content:center;
 .nav-list{
 display:none;
 flex-direction:column;
+
+/* ✅ FIXED POSITIONING */
 position:absolute;
-top:70px;
+top:70px; /* navbar ke just neeche */
 left:0;
 width:100%;
+
 background:#000;
-padding:20px 0;
+padding:20px 0 10px; /* better spacing */
 z-index:10000;
 }
 
@@ -351,62 +352,73 @@ z-index:10000;
 display:flex;
 }
 
-/* MENU ITEMS */
+/* ITEMS */
 .nav-item{
+width:100%;
+text-align:center;
+margin:8px 0;
+}
+
+/* LINKS */
+.nav-item a{
+display:block;
+width:100%;
+padding:10px 0;
+color:#fff;
+}
+
+/* ===== DROPDOWN ===== */
+
+.dropdown{
+display:block;
 width:100%;
 text-align:center;
 }
 
-/* DEFAULT LINKS */
-.nav-item a{
-display:block;
-width:100%;
-padding:14px 0;
-color:#fff;
-}
-
-/* 🔥 FIX: dropdown row */
-.dropdown{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:4px;
-position:relative;
-}
-
-/* 🔥 CRITICAL FIX (removes overlay issue) */
-.dropdown .expertise-link{
-display:inline-block !important;
-width:auto !important;
-padding:14px 4px;
-}
-
-/* 🔥 ARROW FIX */
-.arrow{
+/* TEXT + ARROW */
+.dropdown .expertise-link,
+.dropdown .arrow{
 display:inline-block;
+vertical-align:middle;
+}
+
+/* FIX LINK WIDTH */
+.dropdown .expertise-link{
+width:auto;
+padding:10px 6px;
+}
+
+/* ARROW */
+.arrow{
 color:#fff;
-font-size:16px;
+font-size:14px;
 padding:6px;
 cursor:pointer;
-position:relative;
-z-index:2; /* ensures clickable */
 }
 
-/* DROPDOWN */
+/* DROPDOWN MENU */
 .dropdown-menu{
 display:none;
-position:static;
-background:#000;
+width:100%;
+background:#111;
+padding:5px 0;
 }
 
-/* SHOW WHEN CLICKED */
+/* OPEN */
 .dropdown.open .dropdown-menu{
 display:block;
 }
 
-/* DISABLE HOVER */
-.dropdown:hover .dropdown-menu{
-display:none;
+/* ITEMS */
+.dropdown-menu li{
+list-style:none;
+}
+
+.dropdown-menu li a{
+display:block;
+padding:10px 0;
+color:#fff;
+font-size:14px;
 }
 
 }
