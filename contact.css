@@ -474,7 +474,7 @@ display:none;
 @media (max-width:768px){
 
     .navbar{
-  position:relative;
+  position:sticky;
   height:70px;
   min-height:70px;   /* ADD THIS */
   padding:0 20px;

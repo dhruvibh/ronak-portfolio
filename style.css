@@ -296,7 +296,7 @@ display:none;
 .navbar{
 display:flex;
 align-items:center;
-position:relative;
+position:sticky;
 height:70px;
 padding:0 20px;
 }

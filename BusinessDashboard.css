@@ -475,7 +475,7 @@ display:none;
 @media (max-width:768px){
 
 .navbar{
-  position:relative;
+  position:sticky;
   height:70px;
   min-height:70px;
   padding:0 20px;
@@ -593,6 +593,11 @@ display:none;
 /* Content */
 .service-content{
   padding:0;   /* remove duplicate padding */
+}
+
+.service-content ul{
+  padding-left:20px;   /* aligns with heading */
+  margin-left:0;
 }
 
 .service-hero,
