@@ -610,4 +610,8 @@ display:none;
   max-width:100%;
 }
 
+.section-heading{
+  font-size:21px;   /* smaller than h1 */
+}
+
 }
