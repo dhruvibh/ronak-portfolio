@@ -567,9 +567,21 @@ font-size:22px;
     text-align: left;         /* keeps text readable */
   }
 
-  .about-photo img{
+.about-photo img{
     width:200px;              /* OPTIONAL: better fit for mobile */
     height:200px;
-  }
+}
+
+.journey-card{
+  width:100%;
+  max-width:320px;
+
+  min-height:200px;   /* KEY FIX */
+  
+  display:flex;
+  flex-direction:column;
+  justify-content:center;  /* center content vertically */
+}
 
 }
+

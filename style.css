@@ -297,8 +297,10 @@ display:none;
 display:flex;
 align-items:center;
 position:sticky;
+top:0;              /* ADD THIS */
 height:70px;
 padding:0 20px;
+z-index:9999;       /* ADD THIS (safety) */
 }
 
 /* LOGO */
